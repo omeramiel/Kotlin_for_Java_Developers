@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="StudySettings">
+    <StudyTaskManager>
+      <option name="VERSION" value="11" />
+      <option name="myUserTests">
+        <map />
+      </option>
+      <option name="course">
+        <Course>
+          <option name="authors">
+            <list />
+          </option>
+          <option name="courseMode" value="Study" />
+          <option name="courseType" value="Coursera" />
+          <option name="customPresentableName" />
+          <option name="description" value="Assignment for Week 5 of the Coursera &lt;a href=&quot;https://www.coursera.org/learn/kotlin-for-java-developers/&quot;&gt;Kotlin for Java Developers&lt;/a&gt; course" />
+          <option name="fromZip" value="false" />
+          <option name="index" value="-1" />
+          <option name="language" value="kotlin" />
+          <option name="languageCode" value="en" />
+          <option name="name" value="Kotlin for Java Developers. Week 5" />
+          <option name="stepikChangeStatus" value="Up to date" />
+          <option name="items">
+            <list>
+              <Lesson>
+                <option name="customPresentableName" />
+                <option name="id" value="0" />
+                <option name="index" value="1" />
+                <option name="name" value="Games" />
+                <option name="stepikChangeStatus" value="Up to date" />
+                <option name="updateDate" value="0" />
+                <option name="taskList">
+                  <list>
+                    <EduTask>
+                      <option name="additionalFiles">
+                        <map>
+                          <entry key="assignmentKey">
+                            <value>
+                              <AdditionalFile>
+                                <option name="text" value="ufQQSL2qEeioYgpHPBWO4A" />
+                                <option name="visible" value="false" />
+                              </AdditionalFile>
+                            </value>
+                          </entry>
+                          <entry key="partId">
+                            <value>
+                              <AdditionalFile>
+                                <option name="text" value="fVVXo" />
+                                <option name="visible" value="false" />
+                              </AdditionalFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="## Game&#10;&#10;The goal of this assignment is to implement two games: &#10;[Game 2048](https://en.wikipedia.org/wiki/2048_(video_game)) and&#10;[Game of Fifteen](https://en.wikipedia.org/wiki/15_puzzle).&#10;&#10;The games are partly implemented already, so your task is to finish the&#10;implementation by following the step by step guide and doing&#10;small tasks on the way.&#10;You need to reuse your implementation of the `GameBoard` interface from&#10;the previous task.&#10;&#10;After finishing the game you can play it yourself by running `main` function&#10;in &lt;a href=&quot;psi_element://PlayGame2048.kt&quot;&gt;ui/PlayGame2048&lt;/a&gt; or&#10;&lt;a href=&quot;psi_element://PlayGameOfFifteen.kt&quot;&gt;ui/PlayGame2048&lt;/a&gt;.&#10;&#10;### Game 2048&#10;&#10;If you're unfamiliar with Game 2048, you can first spend some time playing it&#10;[online](http://2048game.com/). &#10;(Just don't forget about the assignment itself...)&#10;&#10;Initially, you see two numbers on the board (each one might be 2 or 4). &#10;The numbers can be moved to any of the four directions: up, down,&#10;right or left. On each move, the neighboring numbers of the same value are&#10;merged producing a new doubled number. After the move, a new element of&#10;the value 2 or 4 is added to a random free cell.&#10;Note that only the numbers which are equal to the power of 2 can be present&#10;on the board.&#10;If the board is full, the game is over.&#10;The goal is to get 2048.&#10;(Please rather implement the assignment rather than try to win the game).&#10; &#10;* Implement the functionality that moves the content in &#10;one row or column: removes empty cells and merges identical elements.&#10;To provide a little practice with lambdas and generics, this functionality is&#10;declared as a generic function that takes a way to merge two equal elements&#10;as an argument.  &#10;Source: &lt;a href=&quot;psi_element://Game2048Helper.kt&quot;&gt;Game2048Helper.kt&lt;/a&gt;; &#10;tests: &lt;a href=&quot;psi_element://games.game2048.TestGame2048Helper&quot;&gt;TestGame2048Helper.kt&lt;/a&gt;.&#10; &#10;* Specify how the new element should be added.&#10;By the rules of game 2048, the new cell with the value 2 or 4 &#10;(the latter in 10% of the cases) is added to a random empty cell.  &#10;Source: &lt;a href=&quot;psi_element://Game2048Initializer.kt&quot;&gt;Game2048Initializer.kt&lt;/a&gt;; &#10;tests: &lt;a href=&quot;psi_element://games.game2048.TestGame2048Initializer&quot;&gt;TestGame2048Initializer.kt&lt;/a&gt;. &#10;&#10;* You can find the main game process in the &lt;a href=&quot;psi_element://games.game2048.Game2048&quot;&gt;Game2048&lt;/a&gt; class.&#10;Implement the utility function `addNewValue` that adds a new value to &#10;a random free cell. The `initializer` parameter returns both a value and a cell&#10;that the new value should be added to.  &#10;Source: &lt;a href=&quot;psi_element://Game2048.kt&quot;&gt;Game2048.kt&lt;/a&gt;; &#10;tests: &lt;a href=&quot;psi_element://games.game2048.TestAddingValue&quot;&gt;TestAddingValue.kt&lt;/a&gt;. &#10;&#10;* Implement the utility function `moveValuesInRowOrColumn`, which &#10;updates the map contents by moving the elements only in one row or column.  &#10;Source: &lt;a href=&quot;psi_element://Game2048.kt&quot;&gt;Game2048.kt&lt;/a&gt;;&#10;tests: &lt;a href=&quot;psi_element://games.game2048.TestMoveValuesInRowOrColumn&quot;&gt;TestMoveValuesInRowOrColumn.kt&lt;/a&gt;.&#10;&#10;* Implement the remaining function `moveValues`, which moves all the elements&#10;in a board to a given direction following the rule games.  &#10;Source: &lt;a href=&quot;psi_element://Game2048.kt&quot;&gt;Game2048.kt&lt;/a&gt;;&#10;tests:  &lt;a href=&quot;psi_element://games.game2048.TestMoveValues&quot;&gt;TestMoveValues.kt&lt;/a&gt;. &#10;&#10;### Game of Fifteen&#10;&#10;The board for the game of Fifteen is filled randomly with numbers from 1 to 15 and&#10;one empty space. You can move the neighboring value to the empty space.&#10;The goal is to get the sorted sequence from 1 to 15.&#10;&#10;You can check the Game of Fifteen online &#10;[here](http://migo.sixbit.org/puzzles/fifteen/).&#10;Note that in the implementation for this assignment, the values are moved&#10;by arrows rather than mouse clicks.&#10;&#10;* Game of Fifteen is solvable only if the initial permutation of numbers&#10;is [even](https://en.wikipedia.org/wiki/Parity_of_a_permutation).&#10;First, implement the function `isEven` declared in &#10;&lt;a href=&quot;psi_element://GameOfFifteenHelper.kt&quot;&gt;GameOfFifteenHelper.kt&lt;/a&gt;&#10;checking whether a permutation is even or odd.&#10;Source: &lt;a href=&quot;psi_element://GameOfFifteenHelper.kt&quot;&gt;GameOfFifteenHelper.kt&lt;/a&gt;;&#10;tests:  &lt;a href=&quot;psi_element://games.gameOfFifteen.TestGameOfFifteenHelper&quot;&gt;TestGameOfFifteenHelper.kt&lt;/a&gt;. &#10;&#10;You can use the following algorithm to check the given permutation.&#10;Let `P` is a permutation function on a range of numbers `1..n`.&#10;For a pair `(i, j)` of elements such that `i &lt; j` , if `P(i) &gt; P(j)`,&#10;then the permutation is said to invert the order of `(i, j)`.&#10;The number of such inverted pairs is the _parity_ of the permutation.&#10;If permutation inverts even number of such pairs, it is an even permutation; else&#10;it is an odd permutation.&#10;&#10;* Use the `isEven` function to produce only solvable permutations as initial&#10;permutations.&#10;Source: &lt;a href=&quot;psi_element://GameOfFifteenInitializer.kt&quot;&gt;GameOfFifteenInitializer.kt&lt;/a&gt;;&#10;tests:  &lt;a href=&quot;psi_element://games.gameOfFifteen.TestGameOfFifteenInitializer&quot;&gt;TestGameOfFifteenInitializer.kt&lt;/a&gt;.&#10;&#10;* Implement the `GameOfFifteen` class from scratch describing the game process.&#10;It should implement the `Game` interface and make use of `initializer` argument.&#10;Note that this argument is used in tests to provide a different initial permutation.&#10;Source: &lt;a href=&quot;psi_element://GameOfFifteen.kt&quot;&gt;GameOfFifteen.kt&lt;/a&gt;;&#10;tests:  &lt;a href=&quot;psi_element://games.gameOfFifteen.TestGameOfFifteen&quot;&gt;TestGameOfFifteen.kt&lt;/a&gt;." />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" value="https://www.coursera.org/learn/kotlin-for-java-developers/programming/NSid0/game-2048-game-of-fifteen/discussions" />
+                          <option name="type" value="CUSTOM" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="index" value="1" />
+                      <option name="name" value="Task" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepId" value="0" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="src/board/Board.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/board/Board.kt" />
+                                <option name="text" value="package board&#10;&#10;data class Cell(val i: Int, val j: Int) {&#10;    override fun toString()= &quot;($i, $j)&quot;&#10;}&#10;&#10;enum class Direction {&#10;    UP, DOWN, RIGHT, LEFT;&#10;&#10;    fun reversed() = when (this) {&#10;        UP -&gt; DOWN&#10;        DOWN -&gt; UP&#10;        RIGHT -&gt; LEFT&#10;        LEFT -&gt; RIGHT&#10;    }&#10;}&#10;&#10;interface SquareBoard {&#10;    val width: Int&#10;&#10;    fun getCellOrNull(i: Int, j: Int): Cell?&#10;    fun getCell(i: Int, j: Int): Cell&#10;&#10;    fun getAllCells(): Collection&lt;Cell&gt;&#10;&#10;    fun getRow(i: Int, jRange: IntProgression): List&lt;Cell&gt;&#10;    fun getColumn(iRange: IntProgression, j: Int): List&lt;Cell&gt;&#10;&#10;    fun Cell.getNeighbour(direction: Direction): Cell?&#10;}&#10;&#10;interface GameBoard&lt;T&gt; : SquareBoard {&#10;&#10;    operator fun get(cell: Cell): T?&#10;    operator fun set(cell: Cell, value: T?)&#10;&#10;    fun filter(predicate: (T?) -&gt; Boolean): Collection&lt;Cell&gt;&#10;    fun find(predicate: (T?) -&gt; Boolean): Cell?&#10;    fun any(predicate: (T?) -&gt; Boolean): Boolean&#10;    fun all(predicate: (T?) -&gt; Boolean): Boolean&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/board/BoardImpl.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/board/BoardImpl.kt" />
+                                <option name="text" value="" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/games/game/Game.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/games/game/Game.kt" />
+                                <option name="text" value="package games.game&#10;&#10;import board.Direction&#10;&#10;interface Game {&#10;    fun initialize()&#10;    fun canMove(): Boolean&#10;    fun hasWon(): Boolean&#10;    fun processMove(direction: Direction)&#10;    operator fun get(i: Int, j: Int): Int?&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/games/game2048/Game2048.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list />
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState">
+                                        <MyInitialState>
+                                          <option name="length" value="6" />
+                                          <option name="offset" value="1227" />
+                                        </MyInitialState>
+                                      </option>
+                                      <option name="initializedFromDependency" value="false" />
+                                      <option name="length" value="80" />
+                                      <option name="offset" value="1223" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="TODO()" />
+                                      <option name="possibleAnswer" value="" />
+                                      <option name="selected" value="true" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="true" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list />
+                                      </option>
+                                      <option name="index" value="1" />
+                                      <option name="initialState">
+                                        <MyInitialState>
+                                          <option name="length" value="6" />
+                                          <option name="offset" value="1705" />
+                                        </MyInitialState>
+                                      </option>
+                                      <option name="initializedFromDependency" value="false" />
+                                      <option name="length" value="320" />
+                                      <option name="offset" value="1769" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="TODO()" />
+                                      <option name="possibleAnswer" value="" />
+                                      <option name="selected" value="true" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="true" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list />
+                                      </option>
+                                      <option name="index" value="2" />
+                                      <option name="initialState">
+                                        <MyInitialState>
+                                          <option name="length" value="6" />
+                                          <option name="offset" value="2052" />
+                                        </MyInitialState>
+                                      </option>
+                                      <option name="initializedFromDependency" value="false" />
+                                      <option name="length" value="1153" />
+                                      <option name="offset" value="2429" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="TODO()" />
+                                      <option name="possibleAnswer" value="" />
+                                      <option name="selected" value="true" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="true" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/games/game2048/Game2048.kt" />
+                                <option name="text" value="package games.game2048&#10;&#10;import board.Cell&#10;import board.Direction&#10;import board.GameBoard&#10;import board.createGameBoard&#10;import games.game.Game&#10;&#10;/*&#10; * Your task is to implement the game 2048 https://en.wikipedia.org/wiki/2048_(video_game).&#10; * Implement the utility methods below.&#10; *&#10; * After implementing it you can try to play the game running 'PlayGame2048'.&#10; */&#10;fun newGame2048(initializer: Game2048Initializer&lt;Int&gt; = RandomGame2048Initializer): Game =&#10;        Game2048(initializer)&#10;&#10;class Game2048(private val initializer: Game2048Initializer&lt;Int&gt;) : Game {&#10;    private val board = createGameBoard&lt;Int?&gt;(4)&#10;&#10;    override fun initialize() {&#10;        repeat(2) {&#10;            board.addNewValue(initializer)&#10;        }&#10;    }&#10;&#10;    override fun canMove() = board.any { it == null }&#10;&#10;    override fun hasWon() = board.any { it == 2048 }&#10;&#10;    override fun processMove(direction: Direction) {&#10;        if (board.moveValues(direction)) {&#10;            board.addNewValue(initializer)&#10;        }&#10;    }&#10;&#10;    override fun get(i: Int, j: Int): Int? = board.run { get(getCell(i, j)) }&#10;}&#10;&#10;/*&#10; * Add a new value produced by 'initializer' to a specified cell in a board.&#10; */&#10;fun GameBoard&lt;Int?&gt;.addNewValue(initializer: Game2048Initializer&lt;Int&gt;) {&#10;    TODO()&#10;}&#10;&#10;/*&#10; * Update the values stored in a board,&#10; * so that the values were &quot;moved&quot; in a specified rowOrColumn only.&#10; * Use the helper function 'moveAndMergeEqual' (in Game2048Helper.kt).&#10; * The values should be moved to the beginning of the row (or column),&#10; * in the same manner as in the function 'moveAndMergeEqual'.&#10; * Return 'true' if the values were moved and 'false' otherwise.&#10; */&#10;fun GameBoard&lt;Int?&gt;.moveValuesInRowOrColumn(rowOrColumn: List&lt;Cell&gt;): Boolean {&#10;    TODO()&#10;}&#10;&#10;/*&#10; * Update the values stored in a board,&#10; * so that the values were &quot;moved&quot; to the specified direction&#10; * following the rules of the 2048 game .&#10; * Use the 'moveValuesInRowOrColumn' function above.&#10; * Return 'true' if the values were moved and 'false' otherwise.&#10; */&#10;fun GameBoard&lt;Int?&gt;.moveValues(direction: Direction): Boolean {&#10;    TODO()&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/games/game2048/Game2048Helper.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/games/game2048/Game2048Helper.kt" />
+                                <option name="text" value="" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/games/game2048/Game2048Initializer.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list />
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState">
+                                        <MyInitialState>
+                                          <option name="length" value="6" />
+                                          <option name="offset" value="820" />
+                                        </MyInitialState>
+                                      </option>
+                                      <option name="initializedFromDependency" value="false" />
+                                      <option name="length" value="0" />
+                                      <option name="offset" value="999" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="TODO()" />
+                                      <option name="possibleAnswer" value="" />
+                                      <option name="selected" value="true" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="true" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/games/game2048/Game2048Initializer.kt" />
+                                <option name="text" value="package games.game2048&#10;&#10;import board.Cell&#10;import board.GameBoard&#10;import kotlin.random.Random&#10;&#10;interface Game2048Initializer&lt;T&gt; {&#10;    /*&#10;     * Specifies the cell and the value that should be added to this cell.&#10;     */&#10;    fun nextValue(board: GameBoard&lt;T?&gt;): Pair&lt;Cell, T&gt;?&#10;}&#10;&#10;object RandomGame2048Initializer: Game2048Initializer&lt;Int&gt; {&#10;    private fun generateRandomStartValue(): Int =&#10;            if (Random.nextInt(10) == 9) 4 else 2&#10;&#10;    /*&#10;     * Generate a random value and a random cell among free cells&#10;     * that given value should be added to.&#10;     * The value should be 2 for 90% cases, and 4 for the rest of the cases.&#10;     * Use the 'generateRandomStartValue' function above.&#10;     * If the board is full return null.&#10;     */&#10;    override fun nextValue(board: GameBoard&lt;Int?&gt;): Pair&lt;Cell, Int&gt;? {&#10;        TODO()&#10;    }&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/games/gameOfFifteen/GameOfFifteen.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list />
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState">
+                                        <MyInitialState>
+                                          <option name="length" value="6" />
+                                          <option name="offset" value="385" />
+                                        </MyInitialState>
+                                      </option>
+                                      <option name="initializedFromDependency" value="false" />
+                                      <option name="length" value="1430" />
+                                      <option name="offset" value="428" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="TODO()" />
+                                      <option name="possibleAnswer" value="" />
+                                      <option name="selected" value="true" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="true" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/games/gameOfFifteen/GameOfFifteen.kt" />
+                                <option name="text" value="package games.gameOfFifteen&#10;&#10;import board.Direction&#10;import board.GameBoard&#10;import board.createGameBoard&#10;import games.game.Game&#10;&#10;/*&#10; * Implement the Game of Fifteen (https://en.wikipedia.org/wiki/15_puzzle).&#10; * When you finish, you can play the game by executing 'PlayGameOfFifteen'.&#10; */&#10;fun newGameOfFifteen(initializer: GameOfFifteenInitializer = RandomGameInitializer()): Game =&#10;    TODO()&#10;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/games/gameOfFifteen/GameOfFifteenHelper.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list />
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState">
+                                        <MyInitialState>
+                                          <option name="length" value="6" />
+                                          <option name="offset" value="480" />
+                                        </MyInitialState>
+                                      </option>
+                                      <option name="initializedFromDependency" value="false" />
+                                      <option name="length" value="409" />
+                                      <option name="offset" value="475" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="TODO()" />
+                                      <option name="possibleAnswer" value="" />
+                                      <option name="selected" value="true" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="true" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/games/gameOfFifteen/GameOfFifteenHelper.kt" />
+                                <option name="text" value="package games.gameOfFifteen&#10;&#10;/*&#10; * This function should return the parity of the permutation.&#10; * true - the permutation is even&#10; * false - the permutation is odd&#10; * https://en.wikipedia.org/wiki/Parity_of_a_permutation&#10;&#10; * If the game of fifteen is started with the wrong parity, you can't get the correct result&#10; *   (numbers sorted in the right order, empty cell at last).&#10; * Thus the initial permutation should be correct.&#10; */&#10;fun isEven(permutation: List&lt;Int&gt;): Boolean {&#10;    TODO()&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/games/gameOfFifteen/GameOfFifteenInitializer.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="hints">
+                                        <list />
+                                      </option>
+                                      <option name="index" value="0" />
+                                      <option name="initialState">
+                                        <MyInitialState>
+                                          <option name="length" value="6" />
+                                          <option name="offset" value="576" />
+                                        </MyInitialState>
+                                      </option>
+                                      <option name="initializedFromDependency" value="false" />
+                                      <option name="length" value="135" />
+                                      <option name="offset" value="569" />
+                                      <option name="placeholderDependency" />
+                                      <option name="placeholderText" value="TODO()" />
+                                      <option name="possibleAnswer" value="" />
+                                      <option name="selected" value="true" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="studentAnswer" />
+                                      <option name="useLength" value="true" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/games/gameOfFifteen/GameOfFifteenInitializer.kt" />
+                                <option name="text" value="package games.gameOfFifteen&#10;&#10;interface GameOfFifteenInitializer {&#10;    /*&#10;     * Even permutation of numbers 1..15&#10;     * used to initialized the first 15 cells on a board.&#10;     * The last cell is empty.&#10;     */&#10;    val initialPermutation: List&lt;Int&gt;&#10;}&#10;&#10;class RandomGameInitializer : GameOfFifteenInitializer {&#10;    /*&#10;     * Generate a random permutation from 1 to 15.&#10;     * `shuffled()` function might be helpful.&#10;     * If the permutation is not even, make it even (for instance,&#10;     * by swapping two numbers).&#10;     */&#10;    override val initialPermutation by lazy {&#10;        TODO()&#10;    }&#10;}&#10;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/games/ui/PlayGame.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/games/ui/PlayGame.kt" />
+                                <option name="text" value="// drawing based on https://github.com/bulenkov/2048&#10;package games.ui&#10;&#10;import board.Direction&#10;import games.game.Game&#10;import java.awt.*&#10;import java.awt.event.KeyAdapter&#10;import java.awt.event.KeyEvent&#10;import javax.swing.JFrame&#10;import javax.swing.JPanel&#10;import javax.swing.WindowConstants&#10;&#10;class PlayGame(val game: Game, val settings: GameSettings) : JPanel() {&#10;    init {&#10;        isFocusable = true&#10;        addKeyListener(object : KeyAdapter() {&#10;            override fun keyPressed(e: KeyEvent) {&#10;                if (game.hasWon() == false &amp;&amp; game.canMove()) {&#10;                    val direction = when (e.keyCode) {&#10;                        KeyEvent.VK_LEFT -&gt; Direction.LEFT&#10;                        KeyEvent.VK_RIGHT -&gt; Direction.RIGHT&#10;                        KeyEvent.VK_DOWN -&gt; Direction.DOWN&#10;                        KeyEvent.VK_UP -&gt; Direction.UP&#10;                        else -&gt; null&#10;                    }&#10;                    if (direction != null) {&#10;                        game.processMove(direction)&#10;                    }&#10;                }&#10;                repaint()&#10;            }&#10;        })&#10;        game.initialize()&#10;    }&#10;&#10;    override fun paint(g: Graphics) {&#10;        super.paint(g)&#10;        g.color = settings.backgroundColor&#10;        g.fillRect(0, 0, this.size.width, this.size.height)&#10;        for (y in 1..4) {&#10;            for (x in 1..4) {&#10;                drawTile(g as Graphics2D, game[y, x] ?: 0, x - 1, y - 1)&#10;            }&#10;        }&#10;    }&#10;&#10;    private fun offsetCoors(arg: Int): Int {&#10;        return arg * (TILES_MARGIN + TILE_SIZE) + TILES_MARGIN&#10;    }&#10;&#10;    private fun drawTile(g: Graphics2D, value: Int, x: Int, y: Int) {&#10;        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON)&#10;        g.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_NORMALIZE)&#10;&#10;        val xOffset = offsetCoors(x)&#10;        val yOffset = offsetCoors(y)&#10;        g.color = settings.getBackgroundColor(value)&#10;        g.fillRoundRect(xOffset, yOffset, TILE_SIZE, TILE_SIZE, 14, 14)&#10;        g.color = settings.getForegroundColor(value)&#10;        val size = if (value &lt; 100) 36 else if (value &lt; 1000) 32 else 24&#10;        val font = Font(FONT_NAME, Font.BOLD, size)&#10;        g.font = font&#10;&#10;        val s = value.toString()&#10;        val fm = getFontMetrics(font)&#10;&#10;        val w = fm.stringWidth(s)&#10;        val h = -fm.getLineMetrics(s, g).baselineOffsets[2].toInt()&#10;&#10;        if (value != 0)&#10;            g.drawString(s, xOffset + (TILE_SIZE - w) / 2, yOffset + TILE_SIZE - (TILE_SIZE - h) / 2 - 2)&#10;&#10;        if (game.hasWon() || game.canMove() == false) {&#10;            g.color = Color(255, 255, 255, 30)&#10;            g.fillRect(0, 0, width, height)&#10;            g.color = Color(78, 139, 202)&#10;            g.font = Font(FONT_NAME, Font.BOLD, 48)&#10;            if (game.hasWon()) {&#10;                g.drawString(&quot;You won!&quot;, 68, 150)&#10;            }&#10;            if (!game.canMove()) {&#10;                g.drawString(&quot;Game over!&quot;, 45, 160)&#10;            }&#10;        }&#10;        g.font = Font(FONT_NAME, Font.PLAIN, 18)&#10;    }&#10;}&#10;&#10;private val FONT_NAME = &quot;Arial&quot;&#10;private val TILE_SIZE = 64&#10;private val TILES_MARGIN = 16&#10;&#10;abstract class GameSettings(val name: String, val backgroundColor: Color) {&#10;    abstract fun getBackgroundColor(value: Int): Color&#10;    abstract fun getForegroundColor(value: Int): Color&#10;}&#10;&#10;fun playGame(game: Game, settings: GameSettings) {&#10;    with(JFrame()) {&#10;        title = settings.name&#10;        defaultCloseOperation = WindowConstants.EXIT_ON_CLOSE&#10;        setSize(340, 400)&#10;        isResizable = false&#10;&#10;        add(PlayGame(game, settings))&#10;&#10;        setLocationRelativeTo(null)&#10;        isVisible = true&#10;    }&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/games/ui/PlayGame2048.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/games/ui/PlayGame2048.kt" />
+                                <option name="text" value="package games.ui&#10;&#10;import games.game2048.newGame2048&#10;import java.awt.Color&#10;&#10;object Game2048Settings : GameSettings(&quot;Game 2048&quot;, Color(0xbbada0)) {&#10;    private val emptyColor = Color(0xcdc1b4)&#10;    private val colors: Map&lt;Int, Color&gt; = run {&#10;        val colors = listOf(&#10;                0xeee4da, 0xede0c8, 0xf2b179, 0xf59563, 0xf67c5f, 0xf65e3b,&#10;                0xedcf72, 0xedcc61, 0xedc850, 0xedc53f, 0xedc22e)&#10;&#10;        val values: List&lt;Int&gt; = (1..11).map { Math.pow(2.0, it.toDouble()).toInt() }&#10;        values.zip(colors.map { Color(it) }).toMap()&#10;    }&#10;&#10;    override fun getBackgroundColor(value: Int) = colors[value] ?: emptyColor&#10;    override fun getForegroundColor(value: Int) = if (value &lt; 16) Color(0x776e65) else Color(0xf9f6f2)&#10;}&#10;&#10;&#10;fun main() {&#10;    playGame(newGame2048(), Game2048Settings)&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/games/ui/PlayGameOfFifteen.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/games/ui/PlayGameOfFifteen.kt" />
+                                <option name="text" value="package games.ui&#10;&#10;import games.gameOfFifteen.newGameOfFifteen&#10;import java.awt.Color&#10;&#10;object GameOfFifteenSettings : GameSettings(&quot;Game of fifteen&quot;, Color(0x909090)) {&#10;    private val emptyColor = Color(0x787878)&#10;    private val firstColor = Color(0xC8C8C8)&#10;    private val secondColor = Color(0xCCCCFF)&#10;    private val foregroundColor = Color(0x545AA7)&#10;&#10;    override fun getBackgroundColor(value: Int) = when {&#10;        value == 0 -&gt; emptyColor&#10;        ((value - 1) / 4 + value % 4) % 2 == 0 -&gt; firstColor&#10;        else -&gt; secondColor&#10;    }&#10;&#10;    override fun getForegroundColor(value: Int) = foregroundColor&#10;}&#10;&#10;fun main() {&#10;    playGame(newGameOfFifteen(), GameOfFifteenSettings)&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="test/games/board/TestGameBoard.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="test/games/board/TestGameBoard.kt" />
+                                <option name="text" value="package games.board&#10;&#10;import board.GameBoard&#10;import board.createGameBoard&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestGameBoard {&#10;    operator fun &lt;T&gt; GameBoard&lt;T&gt;.get(i: Int, j: Int) = get(getCell(i, j))&#10;    operator fun &lt;T&gt; GameBoard&lt;T&gt;.set(i: Int, j: Int, value: T) = set(getCell(i, j), value)&#10;&#10;    @Test&#10;    fun testGetAndSetElement() {&#10;        val gameBoard = createGameBoard&lt;Char&gt;(2)&#10;        gameBoard[1, 1] = 'a'&#10;        Assert.assertEquals('a', gameBoard[1, 1])&#10;    }&#10;&#10;    @Test&#10;    fun testFilter() {&#10;        val gameBoard = createGameBoard&lt;Char&gt;(2)&#10;        gameBoard[1, 1] = 'a'&#10;        gameBoard[1, 2] = 'b'&#10;        val cells = gameBoard.filter { it == 'a' }&#10;        Assert.assertEquals(1, cells.size)&#10;        val cell = cells.first()&#10;        Assert.assertEquals(1, cell.i)&#10;        Assert.assertEquals(1, cell.j)&#10;    }&#10;&#10;    @Test&#10;    fun testAll() {&#10;        val gameBoard = createGameBoard&lt;Char&gt;(2)&#10;        gameBoard[1, 1] = 'a'&#10;        gameBoard[1, 2] = 'a'&#10;        Assert.assertFalse(gameBoard.all { it == 'a' })&#10;        gameBoard[2, 1] = 'a'&#10;        gameBoard[2, 2] = 'a'&#10;        Assert.assertTrue(gameBoard.all { it == 'a' })&#10;    }&#10;&#10;    @Test&#10;    fun testAny() {&#10;        val gameBoard = createGameBoard&lt;Char&gt;(2)&#10;        gameBoard[1, 1] = 'a'&#10;        gameBoard[1, 2] = 'b'&#10;        Assert.assertTrue(gameBoard.any { it in 'a'..'b' })&#10;        Assert.assertTrue(gameBoard.any { it == null })&#10;    }&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="test/games/board/TestSquareBoard.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="test/games/board/TestSquareBoard.kt" />
+                                <option name="text" value="package games.board&#10;&#10;import board.Cell&#10;import board.Direction.*&#10;import board.createSquareBoard&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestSquareBoard {&#10;&#10;    private fun Cell?.asString() = if (this != null) &quot;($i, $j)&quot; else &quot;&quot;&#10;&#10;    private fun Collection&lt;Cell&gt;.asString() = joinToString(prefix = &quot;[&quot;, postfix = &quot;]&quot;) { it.asString() }&#10;&#10;    @Test&#10;    fun testAllCells() {&#10;        val board = createSquareBoard(2)&#10;        val cells = board.getAllCells().sortedWith(compareBy&lt;Cell&gt; { it.i }.thenBy { it.j })&#10;        Assert.assertEquals(&quot;[(1, 1), (1, 2), (2, 1), (2, 2)]&quot;, cells.asString())&#10;    }&#10;&#10;    @Test&#10;    fun testCell() {&#10;        val board = createSquareBoard(2)&#10;        val cell = board.getCellOrNull(1, 2)&#10;        Assert.assertEquals(1, cell?.i)&#10;        Assert.assertEquals(2, cell?.j)&#10;    }&#10;&#10;    @Test&#10;    fun testNoCell() {&#10;        val board = createSquareBoard(2)&#10;        val cell = board.getCellOrNull(3, 3)&#10;        Assert.assertEquals(null, cell)&#10;    }&#10;&#10;    @Test&#10;    fun testRow() {&#10;        val board = createSquareBoard(2)&#10;        val row = board.getRow(1, 1..2)&#10;        Assert.assertEquals(&quot;[(1, 1), (1, 2)]&quot;, row.asString())&#10;    }&#10;&#10;    @Test&#10;    fun testRowReversed() {&#10;        val board = createSquareBoard(2)&#10;        val row = board.getRow(1, 2 downTo 1)&#10;        Assert.assertEquals(&quot;[(1, 2), (1, 1)]&quot;, row.asString())&#10;    }&#10;&#10;    @Test&#10;    fun testRowWrongRange() {&#10;        val board = createSquareBoard(2)&#10;        val row = board.getRow(1, 1..2)&#10;        Assert.assertEquals(&quot;[(1, 1), (1, 2)]&quot;, row.asString())&#10;    }&#10;&#10;    @Test&#10;    fun testNeighbour() {&#10;        val board = createSquareBoard(2)&#10;        with(board) {&#10;            val cell = getCellOrNull(1, 1)&#10;            Assert.assertNotNull(cell)&#10;            Assert.assertEquals(null, cell!!.getNeighbour(UP))&#10;            Assert.assertEquals(null, cell.getNeighbour(LEFT))&#10;            Assert.assertEquals(&quot;(2, 1)&quot;, cell.getNeighbour(DOWN).asString())&#10;            Assert.assertEquals(&quot;(1, 2)&quot;, cell.getNeighbour(RIGHT).asString())&#10;        }&#10;    }&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="test/games/game2048/AbstractTestGameWithSmallNumbers.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="test/games/game2048/AbstractTestGameWithSmallNumbers.kt" />
+                                <option name="text" value="package games.game2048&#10;&#10;import board.GameBoard&#10;import board.createGameBoard&#10;&#10;abstract class AbstractTestGameWithSmallNumbers {&#10;    private val width = 4&#10;&#10;    fun createBoard(input: String): GameBoard&lt;Int?&gt; {&#10;        return createBoard(TestBoard(input))&#10;    }&#10;&#10;    fun createBoard(input: TestBoard): GameBoard&lt;Int?&gt; {&#10;        val board = createGameBoard&lt;Int?&gt;(width)&#10;        for (cell in board.getAllCells()) {&#10;            val ch = input.values[cell.i - 1][cell.j - 1]&#10;            if (ch != 0) {&#10;                board[cell] = ch&#10;            }&#10;        }&#10;        return board&#10;    }&#10;&#10;    fun GameBoard&lt;Int?&gt;.toTestBoard() = TestBoard(valuesToString { i, j -&gt;&#10;        this[getCell(i + 1, j + 1)]&#10;    })&#10;}&#10;&#10;private fun valuesToString(getElement: (Int, Int) -&gt; Int?) = buildString {&#10;    for (i in 0..3) {&#10;        for (j in 0..3) {&#10;            append(getElement(i, j) ?: '-')&#10;        }&#10;        append(' ')&#10;    }&#10;}.trim()&#10;&#10;data class TestBoard(val board: String) {&#10;    val values: List&lt;List&lt;Int?&gt;&gt; by lazy {&#10;        board.trim()&#10;                .split(' ')&#10;                .map { row -&gt; row.map { ch -&gt; if (ch == '-') null else ch - '0' } }&#10;    }&#10;&#10;    fun reversed(): TestBoard = TestBoard(board.reversed())&#10;&#10;    fun mirror(): TestBoard {&#10;        return TestBoard(valuesToString { i, j -&gt; values[j][i] })&#10;    }&#10;&#10;    override fun toString() =&#10;            board.split(' ')&#10;                    .joinToString(&quot;\n&quot;) { it.toList().joinToString(&quot; &quot;) }&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="test/games/game2048/TestAddingValue.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="test/games/game2048/TestAddingValue.kt" />
+                                <option name="text" value="package games.game2048&#10;&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestAddingValue : AbstractTestGameWithSmallNumbers() {&#10;    @Test&#10;    fun test1() = testAddingOneNumber(&quot;---- ---- -2-- ----&quot;)&#10;&#10;    @Test&#10;    fun test2() = testAddingOneNumber(&quot;2222 ---- ---- ----&quot;)&#10;&#10;    @Test&#10;    fun test3() = testAddingOneNumber(&quot;2--- 4--- -2-- ---8&quot;)&#10;&#10;    @Test&#10;    fun test4() = testAddingOneNumber(&quot;-248 2-2- -2-8 4442&quot;)&#10;&#10;    private fun testAddingOneNumber(input: String) {&#10;        val inputBoard = TestBoard(input)&#10;        val board = createBoard(inputBoard)&#10;        board.addNewValue(RandomGame2048Initializer)&#10;        val result = board.toTestBoard()&#10;        Assert.assertEquals(&#10;                buildString {&#10;                    appendln(&quot;Only one element should be different after adding a new element.&quot;)&#10;                    appendln(&quot;Input:&quot;)&#10;                    appendln(&quot;$inputBoard&quot;)&#10;                    appendln(&quot;Result:&quot;)&#10;                    appendln(&quot;$result&quot;)&#10;                },&#10;                1, inputBoard.board.indices.count { input[it] != result.board[it] })&#10;    }&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="test/games/game2048/TestGame2048.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="test/games/game2048/TestGame2048.kt" />
+                                <option name="text" value="package games.game2048&#10;&#10;import board.Cell&#10;import board.Direction&#10;import board.Direction.*&#10;import board.GameBoard&#10;import games.game.Game&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestGame2048 {&#10;    private fun Game.asString() =&#10;            (1..4).joinToString(&quot;\n&quot;) { i -&gt;&#10;                (1..4).joinToString(&quot; &quot;) { j -&gt;&#10;                    &quot;${get(i, j) ?: &quot;-&quot;}&quot;&#10;                }&#10;            }&#10;&#10;    class TestGame2048Initializer(moves: List&lt;Move&gt;) : Game2048Initializer&lt;Int&gt; {&#10;        val iterator = moves.iterator()&#10;        override fun nextValue(board: GameBoard&lt;Int?&gt;): Pair&lt;Cell, Int&gt; {&#10;            val move = iterator.next()&#10;            return board.getCell(move.position.first, move.position.second) to move.value&#10;        }&#10;    }&#10;&#10;    private fun testGame(moves: List&lt;Move&gt;) {&#10;        val game = newGame2048(TestGame2048Initializer(moves))&#10;        game.initialize()&#10;        run {&#10;            // checking the state after initialization&#10;            val first = moves[0]&#10;            val second = moves[1]&#10;            Assert.assertEquals(&quot;Wrong result after board initialization &quot; +&#10;                    &quot;by '${first.value}' at ${first.cell} and &quot; +&#10;                    &quot;'${second.value}' at ${second.cell}&quot;,&#10;                    second.board, game.asString())&#10;        }&#10;&#10;        for ((index, move) in moves.withIndex()) {&#10;            if (move.direction == null) continue&#10;            // checking the state after each move&#10;            game.processMove(move.direction)&#10;            val prev = moves[index - 1].board&#10;            Assert.assertEquals(&quot;Wrong result after moving ${move.direction} &quot; +&#10;                    &quot;and then adding '${move.value}' to ${move.cell} &quot; +&#10;                    &quot;for\n$prev\n&quot;,&#10;                    move.board, game.asString())&#10;        }&#10;    }&#10;&#10;    data class Move(&#10;            val position: Pair&lt;Int, Int&gt;,&#10;            val value: Int,&#10;            val direction: Direction?,&#10;            val initialBoard: String&#10;    ) {&#10;        val cell: String&#10;            get() = &quot;Cell(${position.first}, ${position.second})&quot;&#10;&#10;        val board: String = initialBoard.trimMargin()&#10;    }&#10;&#10;    @Test&#10;    fun testMoves() {&#10;        testGame(listOf(&#10;                Move(Pair(1, 1), 2, null, &quot;&quot;&quot;&#10;            |2 - - -&#10;            |- - - -&#10;            |- - - -&#10;            |- - - -&quot;&quot;&quot;),&#10;                Move(Pair(1, 4), 2, null, &quot;&quot;&quot;&#10;            |2 - - 2&#10;            |- - - -&#10;            |- - - -&#10;            |- - - -&quot;&quot;&quot;),&#10;                Move(Pair(3, 2), 4, RIGHT, &quot;&quot;&quot;&#10;            |- - - 4&#10;            |- - - -&#10;            |- 4 - -&#10;            |- - - -&quot;&quot;&quot;),&#10;                Move(Pair(4, 2), 2, UP, &quot;&quot;&quot;&#10;            |- 4 - 4&#10;            |- - - -&#10;            |- - - -&#10;            |- 2 - -&quot;&quot;&quot;),&#10;                Move(Pair(2, 2), 2, LEFT, &quot;&quot;&quot;&#10;            |8 - - -&#10;            |- 2 - -&#10;            |- - - -&#10;            |2 - - -&quot;&quot;&quot;),&#10;                Move(Pair(4, 4), 2, DOWN, &quot;&quot;&quot;&#10;            |- - - -&#10;            |- - - -&#10;            |8 - - -&#10;            |2 2 - 2&quot;&quot;&quot;),&#10;                Move(Pair(3, 3), 2, RIGHT, &quot;&quot;&quot;&#10;            |- - - -&#10;            |- - - -&#10;            |- - 2 8&#10;            |- - 2 4&quot;&quot;&quot;),&#10;                Move(Pair(1, 2), 4, DOWN, &quot;&quot;&quot;&#10;            |- 4 - -&#10;            |- - - -&#10;            |- - - 8&#10;            |- - 4 4&quot;&quot;&quot;),&#10;                Move(Pair(3, 1), 2, RIGHT, &quot;&quot;&quot;&#10;            |- - - 4&#10;            |- - - -&#10;            |2 - - 8&#10;            |- - - 8&quot;&quot;&quot;),&#10;                Move(Pair(3, 3), 2, DOWN, &quot;&quot;&quot;&#10;            |- - - -&#10;            |- - - -&#10;            |- - 2 4&#10;            |2 - - 16&quot;&quot;&quot;),&#10;                Move(Pair(2, 3), 2, DOWN, &quot;&quot;&quot;&#10;            |- - - -&#10;            |- - 2 -&#10;            |- - - 4&#10;            |2 - 2 16&quot;&quot;&quot;),&#10;                Move(Pair(1, 4), 2, RIGHT, &quot;&quot;&quot;&#10;            |- - - 2&#10;            |- - - 2&#10;            |- - - 4&#10;            |- - 4 16&quot;&quot;&quot;),&#10;                Move(Pair(3, 2), 2, LEFT, &quot;&quot;&quot;&#10;            |2 - - -&#10;            |2 - - -&#10;            |4 2 - -&#10;            |4 16 - -&quot;&quot;&quot;),&#10;                Move(Pair(1, 3), 2, DOWN, &quot;&quot;&quot;&#10;            |- - 2 -&#10;            |- - - -&#10;            |4 2 - -&#10;            |8 16 - -&quot;&quot;&quot;)&#10;        ))&#10;    }&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="test/games/game2048/TestGame2048Helper.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="test/games/game2048/TestGame2048Helper.kt" />
+                                <option name="text" value="package games.game2048&#10;&#10;import org.junit.Assert&#10;import org.junit.FixMethodOrder&#10;import org.junit.Test&#10;import org.junit.runners.MethodSorters&#10;&#10;@FixMethodOrder(MethodSorters.NAME_ASCENDING)&#10;class TestGame2048Helper {&#10;&#10;    @Test&#10;    fun test01SimpleMove1() = testMerge(listOf(null, null, null, &quot;a&quot;), listOf(&quot;a&quot;))&#10;&#10;    @Test&#10;    fun test02SimpleMove2() = testMerge(listOf(&quot;b&quot;, null, null, &quot;a&quot;), listOf(&quot;b&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test03SimpleMove3() = testMerge(listOf(null, &quot;b&quot;, null, &quot;a&quot;), listOf(&quot;b&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test04SimpleMerge1() = testMerge(listOf(&quot;a&quot;, &quot;a&quot;, null, null), listOf(&quot;aa&quot;))&#10;&#10;    @Test&#10;    fun test05SimpleMerge2() = testMerge(listOf(null, &quot;a&quot;, &quot;a&quot;, null), listOf(&quot;aa&quot;))&#10;&#10;    @Test&#10;    fun test06SimpleMerge3() = testMerge(listOf(null, null, &quot;a&quot;, &quot;a&quot;), listOf(&quot;aa&quot;))&#10;&#10;    @Test&#10;    fun test07SimpleMerge4() = testMerge(listOf(&quot;a&quot;, null, &quot;a&quot;, null), listOf(&quot;aa&quot;))&#10;&#10;    @Test&#10;    fun test08SimpleMerge5() = testMerge(listOf(&quot;a&quot;, null, null, &quot;a&quot;), listOf(&quot;aa&quot;))&#10;&#10;    @Test&#10;    fun test09SimpleMerge6() = testMerge(listOf(null, &quot;a&quot;, null, &quot;a&quot;), listOf(&quot;aa&quot;))&#10;&#10;    @Test&#10;    fun test10MergeWithExtraElement1() = testMerge(listOf(&quot;a&quot;, null, &quot;a&quot;, &quot;a&quot;), listOf(&quot;aa&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test11MergeWithExtraElement2() = testMerge(listOf(&quot;a&quot;, null, &quot;a&quot;, &quot;b&quot;), listOf(&quot;aa&quot;, &quot;b&quot;))&#10;&#10;    @Test&#10;    fun test12MergeWithExtraElement3() = testMerge(listOf(&quot;a&quot;, &quot;a&quot;, null, &quot;b&quot;), listOf(&quot;aa&quot;, &quot;b&quot;))&#10;&#10;    @Test&#10;    fun test13NoMerge1() = testMerge(listOf(&quot;a&quot;, &quot;b&quot;, &quot;a&quot;, null), listOf(&quot;a&quot;, &quot;b&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test14NoMerge2() = testMerge(listOf(&quot;a&quot;, null, &quot;b&quot;, &quot;a&quot;), listOf(&quot;a&quot;, &quot;b&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test15MergeInFull1() = testMerge(listOf(&quot;a&quot;, &quot;a&quot;, &quot;b&quot;, &quot;a&quot;), listOf(&quot;aa&quot;, &quot;b&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test16MergeInFull2() = testMerge(listOf(&quot;a&quot;, &quot;a&quot;, &quot;b&quot;, &quot;b&quot;), listOf(&quot;aa&quot;, &quot;bb&quot;))&#10;&#10;    @Test&#10;    fun test17MergeOfThree1() = testMerge(listOf(&quot;a&quot;, &quot;a&quot;, &quot;a&quot;, null), listOf(&quot;aa&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test18MergeOfThree2() = testMerge(listOf(&quot;a&quot;, null, &quot;a&quot;, &quot;a&quot;), listOf(&quot;aa&quot;, &quot;a&quot;))&#10;&#10;    private fun testMerge(input: List&lt;String?&gt;, expected: List&lt;String?&gt;) {&#10;        val result = input.moveAndMergeEqual { it.repeat(2) }&#10;        Assert.assertEquals(&quot;Wrong result for $input.moveAndMergeEqual()&quot;,&#10;                expected, result)&#10;    }&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="test/games/game2048/TestGame2048Initializer.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="test/games/game2048/TestGame2048Initializer.kt" />
+                                <option name="text" value="package games.game2048&#10;&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestGame2048Initializer : AbstractTestGameWithSmallNumbers() {&#10;    private val prefix = &quot;Testing RandomGame2048Initializer.nextValue():&quot;&#10;&#10;    @Test&#10;    fun test0() {&#10;        val board = createBoard(&quot;4248 2824 8248 2482&quot;)&#10;        val nextValue = RandomGame2048Initializer.nextValue(board)&#10;        Assert.assertNull(&quot;$prefix new elements can't be added to a full board&quot;, nextValue)&#10;    }&#10;&#10;    @Test&#10;    fun test1() = testNextValue(&quot;0000 0000 0200 0000&quot;)&#10;&#10;    @Test&#10;    fun test2() = testNextValue(&quot;2222 0000 0000 0000&quot;)&#10;&#10;    @Test&#10;    fun test3() = testNextValue(&quot;2000 4000 0200 0008&quot;)&#10;&#10;    @Test&#10;    fun test4() = testNextValue(&quot;0248 2020 0208 4442&quot;)&#10;&#10;    private fun testNextValue(input: String) {&#10;        val board = createBoard(input)&#10;        val (cell, value) = RandomGame2048Initializer.nextValue(board)&#10;                ?: throw AssertionError(&quot;$prefix Next value should be non-null for $board&quot;)&#10;        val empty = board.filter { it == null }&#10;        Assert.assertTrue(&quot;$prefix a value might be added only to one of the empty cells&quot;, cell in empty)&#10;        Assert.assertTrue(&quot;$prefix new element can only be 2 or 4&quot;, value in setOf(2, 4))&#10;    }&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="test/games/game2048/TestMoveValues.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="test/games/game2048/TestMoveValues.kt" />
+                                <option name="text" value="package games.game2048&#10;&#10;import board.Direction&#10;import board.Direction.DOWN&#10;import board.Direction.RIGHT&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestMoveValues : AbstractTestGameWithSmallNumbers() {&#10;    @Test&#10;    fun testSimpleMove() = testAllDirections(&quot;---- ---- -2-- ----&quot;, &quot;---- ---- ---2 ----&quot;)&#10;&#10;    @Test&#10;    fun testNoMove() = testAllDirections(&quot;---- ---- ---- 2424&quot;, &quot;---- ---- ---- 2424&quot;, move = false)&#10;&#10;    @Test&#10;    fun testSeveralMoves() = testAllDirections(&quot;2--- -2-- --2- ---2&quot;, &quot;---2 ---2 ---2 ---2&quot;)&#10;&#10;    @Test&#10;    fun testMovesInSomeRows() = testAllDirections(&quot;2--- ---- --2- 2424&quot;, &quot;---2 ---- ---2 2424&quot;)&#10;&#10;    @Test&#10;    fun testMoveAndMerge() = testAllDirections(&quot;2-2- -2-2 --2- ---2&quot;, &quot;---4 ---4 ---2 ---2&quot;)&#10;&#10;    @Test&#10;    fun testMerge() = testAllDirections(&quot;2-22 2-42 22-2 ----&quot;, &quot;--24 -242 --24 ----&quot;)&#10;&#10;    private fun testAllDirections(inputString: String, expectedString: String, move: Boolean = true) {&#10;        val input = TestBoard(inputString)&#10;        val expected = TestBoard(expectedString)&#10;        testRegularAndReversedDirections(RIGHT, input, expected, move)&#10;        testRegularAndReversedDirections(DOWN, input.mirror(), expected.mirror(), move)&#10;    }&#10;&#10;    private fun testRegularAndReversedDirections(direction: Direction, input: TestBoard, expected: TestBoard, move: Boolean) {&#10;        testMove(direction, input, expected, move)&#10;        testMove(direction.reversed(), input.reversed(), expected.reversed(), move)&#10;    }&#10;&#10;    private fun testMove(direction: Direction, input: TestBoard, expected: TestBoard, expectedMove: Boolean) {&#10;        val board = createBoard(input)&#10;        val actualMove = board.moveValues(direction)&#10;        val result = board.toTestBoard()&#10;        Assert.assertEquals(&quot;Incorrect move to $direction.\n&quot; +&#10;                &quot;Input:\n$input\n&quot;, expected, result)&#10;        Assert.assertEquals(&quot;The 'moveValues' method returns incorrect result. Direction: $direction.\n&quot; +&#10;                &quot;Input:\n$input\n&quot;, expectedMove, actualMove)&#10;    }&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="test/games/game2048/TestMoveValuesInRowOrColumn.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="test/games/game2048/TestMoveValuesInRowOrColumn.kt" />
+                                <option name="text" value="package games.game2048&#10;&#10;import board.Cell&#10;import board.SquareBoard&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestMoveValuesInRowOrColumn : AbstractTestGameWithSmallNumbers() {&#10;    private val defaultInput = &quot;&quot;&quot;-2-4 2--- ---- 4---&quot;&quot;&quot;&#10;&#10;    @Test&#10;    fun testRow() = testMoveInRowOrColumn({ it.getRow(1, 1..4) }, &quot;Row(1, 1..4)&quot;,&#10;            &quot;24-- 2--- ---- 4---&quot;)&#10;&#10;    @Test&#10;    fun testRowReversed() = testMoveInRowOrColumn({ it.getRow(1, 4 downTo 1) }, &quot;Row(1, 4 downTo 1)&quot;,&#10;            &quot;--24 2--- ---- 4---&quot;)&#10;&#10;&#10;    @Test&#10;    fun testColumn() = testMoveInRowOrColumn({ it.getColumn(1..4, 1) }, &quot;Column(1..4, 1)&quot;,&#10;            &quot;22-4 4--- ---- ----&quot;)&#10;&#10;    @Test&#10;    fun testColumnReversed() = testMoveInRowOrColumn({ it.getColumn(4 downTo 1, 1) }, &quot;Column(4 downTo 1, 1)&quot;,&#10;            &quot;-2-4 ---- 2--- 4---&quot;)&#10;&#10;    @Test&#10;    fun testNoMove() = testMoveInRowOrColumn({ it.getRow(1, 1..4) }, &quot;Row(1, 1..4)&quot;,&#10;            &quot;2424 ---- ---- ----&quot;, &quot;2424 ---- ---- ----&quot;, expectedMove = false)&#10;&#10;    private fun testMoveInRowOrColumn(&#10;            getRowOrColumn: (SquareBoard) -&gt; List&lt;Cell&gt;,&#10;            rowOrColumnName: String,&#10;            expected: String,&#10;            input: String = defaultInput,&#10;            expectedMove: Boolean = true&#10;    ) {&#10;        val inputBoard = TestBoard(input)&#10;        val board = createBoard(inputBoard)&#10;        val rowOrColumn = getRowOrColumn(board)&#10;        val actualMove = board.moveValuesInRowOrColumn(rowOrColumn)&#10;&#10;        Assert.assertEquals(&quot;Incorrect move in $rowOrColumnName.\nInput:\n$inputBoard\n&quot;,&#10;                TestBoard(expected), board.toTestBoard())&#10;&#10;        Assert.assertEquals(&quot;The 'moveValuesInRowOrColumn' method returns incorrect result for input:\n$inputBoard&quot;,&#10;                expectedMove, actualMove)&#10;    }&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="test/games/gameOfFifteen/TestGameOfFifteen.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="test/games/gameOfFifteen/TestGameOfFifteen.kt" />
+                                <option name="text" value="package games.gameOfFifteen&#10;&#10;import board.Direction&#10;import board.Direction.*&#10;import games.game.Game&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestGameOfFifteen {&#10;    private fun Game.asString() =&#10;            (1..4).joinToString(&quot;\n&quot;) { i -&gt;&#10;                (1..4).joinToString(&quot; &quot;) { j -&gt;&#10;                    get(i, j)?.let { &quot;%2d&quot;.format(it) } ?: &quot; -&quot;&#10;                }&#10;            }&#10;&#10;    class TestGameInitializer(&#10;            override val initialPermutation: List&lt;Int&gt;&#10;    ) : GameOfFifteenInitializer&#10;&#10;    private fun testGame(initialPermutation: List&lt;Int&gt;, moves: List&lt;Move&gt;) {&#10;        val game = newGameOfFifteen(TestGameInitializer(initialPermutation))&#10;        game.initialize()&#10;&#10;        for ((index, move) in moves.withIndex()) {&#10;            if (move.direction == null) continue&#10;            // checking the state after each move&#10;            Assert.assertTrue(&quot;The move for game of fifteen should be always possible&quot;, game.canMove())&#10;            game.processMove(move.direction)&#10;            val prev = moves[index - 1].board&#10;            Assert.assertEquals(&quot;Wrong result after pressing ${move.direction} &quot; +&#10;                    &quot;for\n$prev\n&quot;,&#10;                    move.board, game.asString())&#10;        }&#10;    }&#10;&#10;    data class Move(&#10;            val direction: Direction?,&#10;            val initialBoard: String&#10;    ) {&#10;        val board: String = initialBoard.trimMargin()&#10;    }&#10;&#10;    @Test&#10;    fun testMoves() {&#10;        testGame(listOf(3, 6, 13, 15, 7, 5, 8, 4, 14, 11, 12, 1, 10, 9, 2),&#10;                listOf(&#10;                        Move(null, &quot;&quot;&quot;&#10;            | 3  6 13 15&#10;            | 7  5  8  4&#10;            |14 11 12  1&#10;            |10  9  2  -&quot;&quot;&quot;),&#10;                        Move(RIGHT, &quot;&quot;&quot;&#10;            | 3  6 13 15&#10;            | 7  5  8  4&#10;            |14 11 12  1&#10;            |10  9  -  2&quot;&quot;&quot;),&#10;                        Move(DOWN, &quot;&quot;&quot;&#10;            | 3  6 13 15&#10;            | 7  5  8  4&#10;            |14 11  -  1&#10;            |10  9 12  2&quot;&quot;&quot;),&#10;                        Move(LEFT, &quot;&quot;&quot;&#10;            | 3  6 13 15&#10;            | 7  5  8  4&#10;            |14 11  1  -&#10;            |10  9 12  2&quot;&quot;&quot;),&#10;                        Move(UP, &quot;&quot;&quot;&#10;            | 3  6 13 15&#10;            | 7  5  8  4&#10;            |14 11  1  2&#10;            |10  9 12  -&quot;&quot;&quot;),&#10;                        Move(RIGHT, &quot;&quot;&quot;&#10;            | 3  6 13 15&#10;            | 7  5  8  4&#10;            |14 11  1  2&#10;            |10  9  - 12&quot;&quot;&quot;)&#10;                ))&#10;    }&#10;&#10;    @Test&#10;    fun testWinning() {&#10;        val game = newGameOfFifteen(TestGameInitializer(&#10;                (1..15).toList()))&#10;        game.initialize()&#10;        Assert.assertTrue(&quot;The player should win when the numbers are in order&quot;,&#10;                game.hasWon())&#10;    }&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="test/games/gameOfFifteen/TestGameOfFifteenHelper.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="test/games/gameOfFifteen/TestGameOfFifteenHelper.kt" />
+                                <option name="text" value="package games.gameOfFifteen&#10;&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestGameOfFifteenHelper {&#10;    private fun testPermutation(permutation: List&lt;Int&gt;, expected: Boolean) {&#10;        Assert.assertEquals(&quot;The following permutation should be ${if (expected) &quot;even&quot; else &quot;odd&quot;}: $permutation&quot;, expected,&#10;            isEven(permutation))&#10;    }&#10;&#10;    private fun testPermutation(permutation: String, parity: Boolean) {&#10;        testPermutation(permutation.map { &quot;$it&quot;.toInt() }, parity)&#10;    }&#10;&#10;    private fun testEven(shortPermutation: String) = testPermutation(shortPermutation, true)&#10;    private fun testOdd(shortPermutation: String) = testPermutation(shortPermutation, false)&#10;&#10;    private fun testEven(shortPermutation: Int) = testEven(shortPermutation.toString())&#10;    private fun testOdd(shortPermutation: Int) = testOdd(shortPermutation.toString())&#10;&#10;    @Test&#10;    fun testEven0() = testEven(123)&#10;&#10;    @Test&#10;    fun testEven1() = testEven(1234)&#10;&#10;    @Test&#10;    fun testEven2() = testEven(3124)&#10;&#10;    @Test&#10;    fun testEven3() = testEven(2314)&#10;&#10;    @Test&#10;    fun testEven4() = testEven(2143)&#10;&#10;    @Test&#10;    fun testEven5() = testEven(1423)&#10;&#10;    @Test&#10;    fun testEven6() = testEven(4213)&#10;&#10;    @Test&#10;    fun testEven7() = testEven(1342)&#10;&#10;    @Test&#10;    fun testEven8() = testEven(4132)&#10;&#10;    @Test&#10;    fun testEven9() = testEven(3412)&#10;&#10;    @Test&#10;    fun testEven10() = testEven(3241)&#10;&#10;    @Test&#10;    fun testEven11() = testEven(2431)&#10;&#10;    @Test&#10;    fun testEven12() = testEven(4321)&#10;&#10;    @Test&#10;    fun testEven13() = testEven(&quot;0123456789&quot;)&#10;&#10;    @Test&#10;    fun testEven14() = testEven(&quot;4301865279&quot;)&#10;&#10;    @Test&#10;    fun testEven15() = testEven(&quot;9604572831&quot;)&#10;&#10;    @Test&#10;    fun testEven16() = testEven(&quot;1320485769&quot;)&#10;&#10;    @Test&#10;    fun testOdd0() = testOdd(132)&#10;&#10;    @Test&#10;    fun testOdd1() = testOdd(2134)&#10;&#10;    @Test&#10;    fun testOdd2() = testOdd(1324)&#10;&#10;    @Test&#10;    fun testOdd3() = testOdd(3214)&#10;&#10;    @Test&#10;    fun testOdd4() = testOdd(1243)&#10;&#10;    @Test&#10;    fun testOdd5() = testOdd(4123)&#10;&#10;    @Test&#10;    fun testOdd6() = testOdd(2413)&#10;&#10;    @Test&#10;    fun testOdd7() = testOdd(3142)&#10;&#10;    @Test&#10;    fun testOdd8() = testOdd(1432)&#10;&#10;    @Test&#10;    fun testOdd9() = testOdd(4312)&#10;&#10;    @Test&#10;    fun testOdd10() = testOdd(2341)&#10;&#10;    @Test&#10;    fun testOdd11() = testOdd(4231)&#10;&#10;    @Test&#10;    fun testOdd12() = testOdd(3421)&#10;&#10;    @Test&#10;    fun testOdd13() = testOdd(&quot;1234567890&quot;)&#10;&#10;    @Test&#10;    fun testOdd14() = testOdd(&quot;5782401963&quot;)&#10;&#10;    @Test&#10;    fun testOdd15() = testOdd(&quot;3592871064&quot;)&#10;&#10;    @Test&#10;    fun testOdd16() = testOdd(&quot;2045831967&quot;)&#10;&#10;    @Test&#10;    fun testStart() = testPermutation((1..15).toList(), true)&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="test/games/gameOfFifteen/TestGameOfFifteenInitializer.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="test/games/gameOfFifteen/TestGameOfFifteenInitializer.kt" />
+                                <option name="text" value="package games.gameOfFifteen&#10;&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestGameOfFifteenInitializer {&#10;    @Test&#10;    fun testInitialPermutationIsNotTrivial() {&#10;        val initializer = RandomGameInitializer()&#10;        Assert.assertNotEquals(&quot;The initial permutation must not be trivial&quot;,&#10;            (1..15).toList(), initializer.initialPermutation)&#10;    }&#10;&#10;    @Test&#10;    fun testInitialPermutationIsEven() {&#10;        val initializer = RandomGameInitializer()&#10;        Assert.assertNotEquals(&quot;The initial permutation must be even&quot;,&#10;            isEven(initializer.initialPermutation))&#10;    }&#10;}" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="testsText">
+                        <map>
+                          <entry key="test/games/board/TestGameBoard.kt" value="package games.board&#10;&#10;import board.GameBoard&#10;import board.createGameBoard&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestGameBoard {&#10;    operator fun &lt;T&gt; GameBoard&lt;T&gt;.get(i: Int, j: Int) = get(getCell(i, j))&#10;    operator fun &lt;T&gt; GameBoard&lt;T&gt;.set(i: Int, j: Int, value: T) = set(getCell(i, j), value)&#10;&#10;    @Test&#10;    fun testGetAndSetElement() {&#10;        val gameBoard = createGameBoard&lt;Char&gt;(2)&#10;        gameBoard[1, 1] = 'a'&#10;        Assert.assertEquals('a', gameBoard[1, 1])&#10;    }&#10;&#10;    @Test&#10;    fun testFilter() {&#10;        val gameBoard = createGameBoard&lt;Char&gt;(2)&#10;        gameBoard[1, 1] = 'a'&#10;        gameBoard[1, 2] = 'b'&#10;        val cells = gameBoard.filter { it == 'a' }&#10;        Assert.assertEquals(1, cells.size)&#10;        val cell = cells.first()&#10;        Assert.assertEquals(1, cell.i)&#10;        Assert.assertEquals(1, cell.j)&#10;    }&#10;&#10;    @Test&#10;    fun testAll() {&#10;        val gameBoard = createGameBoard&lt;Char&gt;(2)&#10;        gameBoard[1, 1] = 'a'&#10;        gameBoard[1, 2] = 'a'&#10;        Assert.assertFalse(gameBoard.all { it == 'a' })&#10;        gameBoard[2, 1] = 'a'&#10;        gameBoard[2, 2] = 'a'&#10;        Assert.assertTrue(gameBoard.all { it == 'a' })&#10;    }&#10;&#10;    @Test&#10;    fun testAny() {&#10;        val gameBoard = createGameBoard&lt;Char&gt;(2)&#10;        gameBoard[1, 1] = 'a'&#10;        gameBoard[1, 2] = 'b'&#10;        Assert.assertTrue(gameBoard.any { it in 'a'..'b' })&#10;        Assert.assertTrue(gameBoard.any { it == null })&#10;    }&#10;}" />
+                          <entry key="test/games/board/TestSquareBoard.kt" value="package games.board&#10;&#10;import board.Cell&#10;import board.Direction.*&#10;import board.createSquareBoard&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestSquareBoard {&#10;&#10;    private fun Cell?.asString() = if (this != null) &quot;($i, $j)&quot; else &quot;&quot;&#10;&#10;    private fun Collection&lt;Cell&gt;.asString() = joinToString(prefix = &quot;[&quot;, postfix = &quot;]&quot;) { it.asString() }&#10;&#10;    @Test&#10;    fun testAllCells() {&#10;        val board = createSquareBoard(2)&#10;        val cells = board.getAllCells().sortedWith(compareBy&lt;Cell&gt; { it.i }.thenBy { it.j })&#10;        Assert.assertEquals(&quot;[(1, 1), (1, 2), (2, 1), (2, 2)]&quot;, cells.asString())&#10;    }&#10;&#10;    @Test&#10;    fun testCell() {&#10;        val board = createSquareBoard(2)&#10;        val cell = board.getCellOrNull(1, 2)&#10;        Assert.assertEquals(1, cell?.i)&#10;        Assert.assertEquals(2, cell?.j)&#10;    }&#10;&#10;    @Test&#10;    fun testNoCell() {&#10;        val board = createSquareBoard(2)&#10;        val cell = board.getCellOrNull(3, 3)&#10;        Assert.assertEquals(null, cell)&#10;    }&#10;&#10;    @Test&#10;    fun testRow() {&#10;        val board = createSquareBoard(2)&#10;        val row = board.getRow(1, 1..2)&#10;        Assert.assertEquals(&quot;[(1, 1), (1, 2)]&quot;, row.asString())&#10;    }&#10;&#10;    @Test&#10;    fun testRowReversed() {&#10;        val board = createSquareBoard(2)&#10;        val row = board.getRow(1, 2 downTo 1)&#10;        Assert.assertEquals(&quot;[(1, 2), (1, 1)]&quot;, row.asString())&#10;    }&#10;&#10;    @Test&#10;    fun testRowWrongRange() {&#10;        val board = createSquareBoard(2)&#10;        val row = board.getRow(1, 1..2)&#10;        Assert.assertEquals(&quot;[(1, 1), (1, 2)]&quot;, row.asString())&#10;    }&#10;&#10;    @Test&#10;    fun testNeighbour() {&#10;        val board = createSquareBoard(2)&#10;        with(board) {&#10;            val cell = getCellOrNull(1, 1)&#10;            Assert.assertNotNull(cell)&#10;            Assert.assertEquals(null, cell!!.getNeighbour(UP))&#10;            Assert.assertEquals(null, cell.getNeighbour(LEFT))&#10;            Assert.assertEquals(&quot;(2, 1)&quot;, cell.getNeighbour(DOWN).asString())&#10;            Assert.assertEquals(&quot;(1, 2)&quot;, cell.getNeighbour(RIGHT).asString())&#10;        }&#10;    }&#10;}&#10;" />
+                          <entry key="test/games/game2048/AbstractTestGameWithSmallNumbers.kt" value="package games.game2048&#10;&#10;import board.GameBoard&#10;import board.createGameBoard&#10;&#10;abstract class AbstractTestGameWithSmallNumbers {&#10;    private val width = 4&#10;&#10;    fun createBoard(input: String): GameBoard&lt;Int?&gt; {&#10;        return createBoard(TestBoard(input))&#10;    }&#10;&#10;    fun createBoard(input: TestBoard): GameBoard&lt;Int?&gt; {&#10;        val board = createGameBoard&lt;Int?&gt;(width)&#10;        for (cell in board.getAllCells()) {&#10;            val ch = input.values[cell.i - 1][cell.j - 1]&#10;            if (ch != 0) {&#10;                board[cell] = ch&#10;            }&#10;        }&#10;        return board&#10;    }&#10;&#10;    fun GameBoard&lt;Int?&gt;.toTestBoard() = TestBoard(valuesToString { i, j -&gt;&#10;        this[getCell(i + 1, j + 1)]&#10;    })&#10;}&#10;&#10;private fun valuesToString(getElement: (Int, Int) -&gt; Int?) = buildString {&#10;    for (i in 0..3) {&#10;        for (j in 0..3) {&#10;            append(getElement(i, j) ?: '-')&#10;        }&#10;        append(' ')&#10;    }&#10;}.trim()&#10;&#10;data class TestBoard(val board: String) {&#10;    val values: List&lt;List&lt;Int?&gt;&gt; by lazy {&#10;        board.trim()&#10;                .split(' ')&#10;                .map { row -&gt; row.map { ch -&gt; if (ch == '-') null else ch - '0' } }&#10;    }&#10;&#10;    fun reversed(): TestBoard = TestBoard(board.reversed())&#10;&#10;    fun mirror(): TestBoard {&#10;        return TestBoard(valuesToString { i, j -&gt; values[j][i] })&#10;    }&#10;&#10;    override fun toString() =&#10;            board.split(' ')&#10;                    .joinToString(&quot;\n&quot;) { it.toList().joinToString(&quot; &quot;) }&#10;}" />
+                          <entry key="test/games/game2048/TestAddingValue.kt" value="package games.game2048&#10;&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestAddingValue : AbstractTestGameWithSmallNumbers() {&#10;    @Test&#10;    fun test1() = testAddingOneNumber(&quot;---- ---- -2-- ----&quot;)&#10;&#10;    @Test&#10;    fun test2() = testAddingOneNumber(&quot;2222 ---- ---- ----&quot;)&#10;&#10;    @Test&#10;    fun test3() = testAddingOneNumber(&quot;2--- 4--- -2-- ---8&quot;)&#10;&#10;    @Test&#10;    fun test4() = testAddingOneNumber(&quot;-248 2-2- -2-8 4442&quot;)&#10;&#10;    private fun testAddingOneNumber(input: String) {&#10;        val inputBoard = TestBoard(input)&#10;        val board = createBoard(inputBoard)&#10;        board.addNewValue(RandomGame2048Initializer)&#10;        val result = board.toTestBoard()&#10;        Assert.assertEquals(&#10;                buildString {&#10;                    appendln(&quot;Only one element should be different after adding a new element.&quot;)&#10;                    appendln(&quot;Input:&quot;)&#10;                    appendln(&quot;$inputBoard&quot;)&#10;                    appendln(&quot;Result:&quot;)&#10;                    appendln(&quot;$result&quot;)&#10;                },&#10;                1, inputBoard.board.indices.count { input[it] != result.board[it] })&#10;    }&#10;}" />
+                          <entry key="test/games/game2048/TestGame2048.kt" value="package games.game2048&#10;&#10;import board.Cell&#10;import board.Direction&#10;import board.Direction.*&#10;import board.GameBoard&#10;import games.game.Game&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestGame2048 {&#10;    private fun Game.asString() =&#10;            (1..4).joinToString(&quot;\n&quot;) { i -&gt;&#10;                (1..4).joinToString(&quot; &quot;) { j -&gt;&#10;                    &quot;${get(i, j) ?: &quot;-&quot;}&quot;&#10;                }&#10;            }&#10;&#10;    class TestGame2048Initializer(moves: List&lt;Move&gt;) : Game2048Initializer&lt;Int&gt; {&#10;        val iterator = moves.iterator()&#10;        override fun nextValue(board: GameBoard&lt;Int?&gt;): Pair&lt;Cell, Int&gt; {&#10;            val move = iterator.next()&#10;            return board.getCell(move.position.first, move.position.second) to move.value&#10;        }&#10;    }&#10;&#10;    private fun testGame(moves: List&lt;Move&gt;) {&#10;        val game = newGame2048(TestGame2048Initializer(moves))&#10;        game.initialize()&#10;        run {&#10;            // checking the state after initialization&#10;            val first = moves[0]&#10;            val second = moves[1]&#10;            Assert.assertEquals(&quot;Wrong result after board initialization &quot; +&#10;                    &quot;by '${first.value}' at ${first.cell} and &quot; +&#10;                    &quot;'${second.value}' at ${second.cell}&quot;,&#10;                    second.board, game.asString())&#10;        }&#10;&#10;        for ((index, move) in moves.withIndex()) {&#10;            if (move.direction == null) continue&#10;            // checking the state after each move&#10;            game.processMove(move.direction)&#10;            val prev = moves[index - 1].board&#10;            Assert.assertEquals(&quot;Wrong result after moving ${move.direction} &quot; +&#10;                    &quot;and then adding '${move.value}' to ${move.cell} &quot; +&#10;                    &quot;for\n$prev\n&quot;,&#10;                    move.board, game.asString())&#10;        }&#10;    }&#10;&#10;    data class Move(&#10;            val position: Pair&lt;Int, Int&gt;,&#10;            val value: Int,&#10;            val direction: Direction?,&#10;            val initialBoard: String&#10;    ) {&#10;        val cell: String&#10;            get() = &quot;Cell(${position.first}, ${position.second})&quot;&#10;&#10;        val board: String = initialBoard.trimMargin()&#10;    }&#10;&#10;    @Test&#10;    fun testMoves() {&#10;        testGame(listOf(&#10;                Move(Pair(1, 1), 2, null, &quot;&quot;&quot;&#10;            |2 - - -&#10;            |- - - -&#10;            |- - - -&#10;            |- - - -&quot;&quot;&quot;),&#10;                Move(Pair(1, 4), 2, null, &quot;&quot;&quot;&#10;            |2 - - 2&#10;            |- - - -&#10;            |- - - -&#10;            |- - - -&quot;&quot;&quot;),&#10;                Move(Pair(3, 2), 4, RIGHT, &quot;&quot;&quot;&#10;            |- - - 4&#10;            |- - - -&#10;            |- 4 - -&#10;            |- - - -&quot;&quot;&quot;),&#10;                Move(Pair(4, 2), 2, UP, &quot;&quot;&quot;&#10;            |- 4 - 4&#10;            |- - - -&#10;            |- - - -&#10;            |- 2 - -&quot;&quot;&quot;),&#10;                Move(Pair(2, 2), 2, LEFT, &quot;&quot;&quot;&#10;            |8 - - -&#10;            |- 2 - -&#10;            |- - - -&#10;            |2 - - -&quot;&quot;&quot;),&#10;                Move(Pair(4, 4), 2, DOWN, &quot;&quot;&quot;&#10;            |- - - -&#10;            |- - - -&#10;            |8 - - -&#10;            |2 2 - 2&quot;&quot;&quot;),&#10;                Move(Pair(3, 3), 2, RIGHT, &quot;&quot;&quot;&#10;            |- - - -&#10;            |- - - -&#10;            |- - 2 8&#10;            |- - 2 4&quot;&quot;&quot;),&#10;                Move(Pair(1, 2), 4, DOWN, &quot;&quot;&quot;&#10;            |- 4 - -&#10;            |- - - -&#10;            |- - - 8&#10;            |- - 4 4&quot;&quot;&quot;),&#10;                Move(Pair(3, 1), 2, RIGHT, &quot;&quot;&quot;&#10;            |- - - 4&#10;            |- - - -&#10;            |2 - - 8&#10;            |- - - 8&quot;&quot;&quot;),&#10;                Move(Pair(3, 3), 2, DOWN, &quot;&quot;&quot;&#10;            |- - - -&#10;            |- - - -&#10;            |- - 2 4&#10;            |2 - - 16&quot;&quot;&quot;),&#10;                Move(Pair(2, 3), 2, DOWN, &quot;&quot;&quot;&#10;            |- - - -&#10;            |- - 2 -&#10;            |- - - 4&#10;            |2 - 2 16&quot;&quot;&quot;),&#10;                Move(Pair(1, 4), 2, RIGHT, &quot;&quot;&quot;&#10;            |- - - 2&#10;            |- - - 2&#10;            |- - - 4&#10;            |- - 4 16&quot;&quot;&quot;),&#10;                Move(Pair(3, 2), 2, LEFT, &quot;&quot;&quot;&#10;            |2 - - -&#10;            |2 - - -&#10;            |4 2 - -&#10;            |4 16 - -&quot;&quot;&quot;),&#10;                Move(Pair(1, 3), 2, DOWN, &quot;&quot;&quot;&#10;            |- - 2 -&#10;            |- - - -&#10;            |4 2 - -&#10;            |8 16 - -&quot;&quot;&quot;)&#10;        ))&#10;    }&#10;}" />
+                          <entry key="test/games/game2048/TestGame2048Helper.kt" value="package games.game2048&#10;&#10;import org.junit.Assert&#10;import org.junit.FixMethodOrder&#10;import org.junit.Test&#10;import org.junit.runners.MethodSorters&#10;&#10;@FixMethodOrder(MethodSorters.NAME_ASCENDING)&#10;class TestGame2048Helper {&#10;&#10;    @Test&#10;    fun test01SimpleMove1() = testMerge(listOf(null, null, null, &quot;a&quot;), listOf(&quot;a&quot;))&#10;&#10;    @Test&#10;    fun test02SimpleMove2() = testMerge(listOf(&quot;b&quot;, null, null, &quot;a&quot;), listOf(&quot;b&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test03SimpleMove3() = testMerge(listOf(null, &quot;b&quot;, null, &quot;a&quot;), listOf(&quot;b&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test04SimpleMerge1() = testMerge(listOf(&quot;a&quot;, &quot;a&quot;, null, null), listOf(&quot;aa&quot;))&#10;&#10;    @Test&#10;    fun test05SimpleMerge2() = testMerge(listOf(null, &quot;a&quot;, &quot;a&quot;, null), listOf(&quot;aa&quot;))&#10;&#10;    @Test&#10;    fun test06SimpleMerge3() = testMerge(listOf(null, null, &quot;a&quot;, &quot;a&quot;), listOf(&quot;aa&quot;))&#10;&#10;    @Test&#10;    fun test07SimpleMerge4() = testMerge(listOf(&quot;a&quot;, null, &quot;a&quot;, null), listOf(&quot;aa&quot;))&#10;&#10;    @Test&#10;    fun test08SimpleMerge5() = testMerge(listOf(&quot;a&quot;, null, null, &quot;a&quot;), listOf(&quot;aa&quot;))&#10;&#10;    @Test&#10;    fun test09SimpleMerge6() = testMerge(listOf(null, &quot;a&quot;, null, &quot;a&quot;), listOf(&quot;aa&quot;))&#10;&#10;    @Test&#10;    fun test10MergeWithExtraElement1() = testMerge(listOf(&quot;a&quot;, null, &quot;a&quot;, &quot;a&quot;), listOf(&quot;aa&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test11MergeWithExtraElement2() = testMerge(listOf(&quot;a&quot;, null, &quot;a&quot;, &quot;b&quot;), listOf(&quot;aa&quot;, &quot;b&quot;))&#10;&#10;    @Test&#10;    fun test12MergeWithExtraElement3() = testMerge(listOf(&quot;a&quot;, &quot;a&quot;, null, &quot;b&quot;), listOf(&quot;aa&quot;, &quot;b&quot;))&#10;&#10;    @Test&#10;    fun test13NoMerge1() = testMerge(listOf(&quot;a&quot;, &quot;b&quot;, &quot;a&quot;, null), listOf(&quot;a&quot;, &quot;b&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test14NoMerge2() = testMerge(listOf(&quot;a&quot;, null, &quot;b&quot;, &quot;a&quot;), listOf(&quot;a&quot;, &quot;b&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test15MergeInFull1() = testMerge(listOf(&quot;a&quot;, &quot;a&quot;, &quot;b&quot;, &quot;a&quot;), listOf(&quot;aa&quot;, &quot;b&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test16MergeInFull2() = testMerge(listOf(&quot;a&quot;, &quot;a&quot;, &quot;b&quot;, &quot;b&quot;), listOf(&quot;aa&quot;, &quot;bb&quot;))&#10;&#10;    @Test&#10;    fun test17MergeOfThree1() = testMerge(listOf(&quot;a&quot;, &quot;a&quot;, &quot;a&quot;, null), listOf(&quot;aa&quot;, &quot;a&quot;))&#10;&#10;    @Test&#10;    fun test18MergeOfThree2() = testMerge(listOf(&quot;a&quot;, null, &quot;a&quot;, &quot;a&quot;), listOf(&quot;aa&quot;, &quot;a&quot;))&#10;&#10;    private fun testMerge(input: List&lt;String?&gt;, expected: List&lt;String?&gt;) {&#10;        val result = input.moveAndMergeEqual { it.repeat(2) }&#10;        Assert.assertEquals(&quot;Wrong result for $input.moveAndMergeEqual()&quot;,&#10;                expected, result)&#10;    }&#10;}" />
+                          <entry key="test/games/game2048/TestGame2048Initializer.kt" value="package games.game2048&#10;&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestGame2048Initializer : AbstractTestGameWithSmallNumbers() {&#10;    private val prefix = &quot;Testing RandomGame2048Initializer.nextValue():&quot;&#10;&#10;    @Test&#10;    fun test0() {&#10;        val board = createBoard(&quot;4248 2824 8248 2482&quot;)&#10;        val nextValue = RandomGame2048Initializer.nextValue(board)&#10;        Assert.assertNull(&quot;$prefix new elements can't be added to a full board&quot;, nextValue)&#10;    }&#10;&#10;    @Test&#10;    fun test1() = testNextValue(&quot;0000 0000 0200 0000&quot;)&#10;&#10;    @Test&#10;    fun test2() = testNextValue(&quot;2222 0000 0000 0000&quot;)&#10;&#10;    @Test&#10;    fun test3() = testNextValue(&quot;2000 4000 0200 0008&quot;)&#10;&#10;    @Test&#10;    fun test4() = testNextValue(&quot;0248 2020 0208 4442&quot;)&#10;&#10;    private fun testNextValue(input: String) {&#10;        val board = createBoard(input)&#10;        val (cell, value) = RandomGame2048Initializer.nextValue(board)&#10;                ?: throw AssertionError(&quot;$prefix Next value should be non-null for $board&quot;)&#10;        val empty = board.filter { it == null }&#10;        Assert.assertTrue(&quot;$prefix a value might be added only to one of the empty cells&quot;, cell in empty)&#10;        Assert.assertTrue(&quot;$prefix new element can only be 2 or 4&quot;, value in setOf(2, 4))&#10;    }&#10;}" />
+                          <entry key="test/games/game2048/TestMoveValues.kt" value="package games.game2048&#10;&#10;import board.Direction&#10;import board.Direction.DOWN&#10;import board.Direction.RIGHT&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestMoveValues : AbstractTestGameWithSmallNumbers() {&#10;    @Test&#10;    fun testSimpleMove() = testAllDirections(&quot;---- ---- -2-- ----&quot;, &quot;---- ---- ---2 ----&quot;)&#10;&#10;    @Test&#10;    fun testNoMove() = testAllDirections(&quot;---- ---- ---- 2424&quot;, &quot;---- ---- ---- 2424&quot;, move = false)&#10;&#10;    @Test&#10;    fun testSeveralMoves() = testAllDirections(&quot;2--- -2-- --2- ---2&quot;, &quot;---2 ---2 ---2 ---2&quot;)&#10;&#10;    @Test&#10;    fun testMovesInSomeRows() = testAllDirections(&quot;2--- ---- --2- 2424&quot;, &quot;---2 ---- ---2 2424&quot;)&#10;&#10;    @Test&#10;    fun testMoveAndMerge() = testAllDirections(&quot;2-2- -2-2 --2- ---2&quot;, &quot;---4 ---4 ---2 ---2&quot;)&#10;&#10;    @Test&#10;    fun testMerge() = testAllDirections(&quot;2-22 2-42 22-2 ----&quot;, &quot;--24 -242 --24 ----&quot;)&#10;&#10;    private fun testAllDirections(inputString: String, expectedString: String, move: Boolean = true) {&#10;        val input = TestBoard(inputString)&#10;        val expected = TestBoard(expectedString)&#10;        testRegularAndReversedDirections(RIGHT, input, expected, move)&#10;        testRegularAndReversedDirections(DOWN, input.mirror(), expected.mirror(), move)&#10;    }&#10;&#10;    private fun testRegularAndReversedDirections(direction: Direction, input: TestBoard, expected: TestBoard, move: Boolean) {&#10;        testMove(direction, input, expected, move)&#10;        testMove(direction.reversed(), input.reversed(), expected.reversed(), move)&#10;    }&#10;&#10;    private fun testMove(direction: Direction, input: TestBoard, expected: TestBoard, expectedMove: Boolean) {&#10;        val board = createBoard(input)&#10;        val actualMove = board.moveValues(direction)&#10;        val result = board.toTestBoard()&#10;        Assert.assertEquals(&quot;Incorrect move to $direction.\n&quot; +&#10;                &quot;Input:\n$input\n&quot;, expected, result)&#10;        Assert.assertEquals(&quot;The 'moveValues' method returns incorrect result. Direction: $direction.\n&quot; +&#10;                &quot;Input:\n$input\n&quot;, expectedMove, actualMove)&#10;    }&#10;}" />
+                          <entry key="test/games/game2048/TestMoveValuesInRowOrColumn.kt" value="package games.game2048&#10;&#10;import board.Cell&#10;import board.SquareBoard&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestMoveValuesInRowOrColumn : AbstractTestGameWithSmallNumbers() {&#10;    private val defaultInput = &quot;&quot;&quot;-2-4 2--- ---- 4---&quot;&quot;&quot;&#10;&#10;    @Test&#10;    fun testRow() = testMoveInRowOrColumn({ it.getRow(1, 1..4) }, &quot;Row(1, 1..4)&quot;,&#10;            &quot;24-- 2--- ---- 4---&quot;)&#10;&#10;    @Test&#10;    fun testRowReversed() = testMoveInRowOrColumn({ it.getRow(1, 4 downTo 1) }, &quot;Row(1, 4 downTo 1)&quot;,&#10;            &quot;--24 2--- ---- 4---&quot;)&#10;&#10;&#10;    @Test&#10;    fun testColumn() = testMoveInRowOrColumn({ it.getColumn(1..4, 1) }, &quot;Column(1..4, 1)&quot;,&#10;            &quot;22-4 4--- ---- ----&quot;)&#10;&#10;    @Test&#10;    fun testColumnReversed() = testMoveInRowOrColumn({ it.getColumn(4 downTo 1, 1) }, &quot;Column(4 downTo 1, 1)&quot;,&#10;            &quot;-2-4 ---- 2--- 4---&quot;)&#10;&#10;    @Test&#10;    fun testNoMove() = testMoveInRowOrColumn({ it.getRow(1, 1..4) }, &quot;Row(1, 1..4)&quot;,&#10;            &quot;2424 ---- ---- ----&quot;, &quot;2424 ---- ---- ----&quot;, expectedMove = false)&#10;&#10;    private fun testMoveInRowOrColumn(&#10;            getRowOrColumn: (SquareBoard) -&gt; List&lt;Cell&gt;,&#10;            rowOrColumnName: String,&#10;            expected: String,&#10;            input: String = defaultInput,&#10;            expectedMove: Boolean = true&#10;    ) {&#10;        val inputBoard = TestBoard(input)&#10;        val board = createBoard(inputBoard)&#10;        val rowOrColumn = getRowOrColumn(board)&#10;        val actualMove = board.moveValuesInRowOrColumn(rowOrColumn)&#10;&#10;        Assert.assertEquals(&quot;Incorrect move in $rowOrColumnName.\nInput:\n$inputBoard\n&quot;,&#10;                TestBoard(expected), board.toTestBoard())&#10;&#10;        Assert.assertEquals(&quot;The 'moveValuesInRowOrColumn' method returns incorrect result for input:\n$inputBoard&quot;,&#10;                expectedMove, actualMove)&#10;    }&#10;}" />
+                          <entry key="test/games/gameOfFifteen/TestGameOfFifteen.kt" value="package games.gameOfFifteen&#10;&#10;import board.Direction&#10;import board.Direction.*&#10;import games.game.Game&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestGameOfFifteen {&#10;    private fun Game.asString() =&#10;            (1..4).joinToString(&quot;\n&quot;) { i -&gt;&#10;                (1..4).joinToString(&quot; &quot;) { j -&gt;&#10;                    get(i, j)?.let { &quot;%2d&quot;.format(it) } ?: &quot; -&quot;&#10;                }&#10;            }&#10;&#10;    class TestGameInitializer(&#10;            override val initialPermutation: List&lt;Int&gt;&#10;    ) : GameOfFifteenInitializer&#10;&#10;    private fun testGame(initialPermutation: List&lt;Int&gt;, moves: List&lt;Move&gt;) {&#10;        val game = newGameOfFifteen(TestGameInitializer(initialPermutation))&#10;        game.initialize()&#10;&#10;        for ((index, move) in moves.withIndex()) {&#10;            if (move.direction == null) continue&#10;            // checking the state after each move&#10;            Assert.assertTrue(&quot;The move for game of fifteen should be always possible&quot;, game.canMove())&#10;            game.processMove(move.direction)&#10;            val prev = moves[index - 1].board&#10;            Assert.assertEquals(&quot;Wrong result after pressing ${move.direction} &quot; +&#10;                    &quot;for\n$prev\n&quot;,&#10;                    move.board, game.asString())&#10;        }&#10;    }&#10;&#10;    data class Move(&#10;            val direction: Direction?,&#10;            val initialBoard: String&#10;    ) {&#10;        val board: String = initialBoard.trimMargin()&#10;    }&#10;&#10;    @Test&#10;    fun testMoves() {&#10;        testGame(listOf(3, 6, 13, 15, 7, 5, 8, 4, 14, 11, 12, 1, 10, 9, 2),&#10;                listOf(&#10;                        Move(null, &quot;&quot;&quot;&#10;            | 3  6 13 15&#10;            | 7  5  8  4&#10;            |14 11 12  1&#10;            |10  9  2  -&quot;&quot;&quot;),&#10;                        Move(RIGHT, &quot;&quot;&quot;&#10;            | 3  6 13 15&#10;            | 7  5  8  4&#10;            |14 11 12  1&#10;            |10  9  -  2&quot;&quot;&quot;),&#10;                        Move(DOWN, &quot;&quot;&quot;&#10;            | 3  6 13 15&#10;            | 7  5  8  4&#10;            |14 11  -  1&#10;            |10  9 12  2&quot;&quot;&quot;),&#10;                        Move(LEFT, &quot;&quot;&quot;&#10;            | 3  6 13 15&#10;            | 7  5  8  4&#10;            |14 11  1  -&#10;            |10  9 12  2&quot;&quot;&quot;),&#10;                        Move(UP, &quot;&quot;&quot;&#10;            | 3  6 13 15&#10;            | 7  5  8  4&#10;            |14 11  1  2&#10;            |10  9 12  -&quot;&quot;&quot;),&#10;                        Move(RIGHT, &quot;&quot;&quot;&#10;            | 3  6 13 15&#10;            | 7  5  8  4&#10;            |14 11  1  2&#10;            |10  9  - 12&quot;&quot;&quot;)&#10;                ))&#10;    }&#10;&#10;    @Test&#10;    fun testWinning() {&#10;        val game = newGameOfFifteen(TestGameInitializer(&#10;                (1..15).toList()))&#10;        game.initialize()&#10;        Assert.assertTrue(&quot;The player should win when the numbers are in order&quot;,&#10;                game.hasWon())&#10;    }&#10;}" />
+                          <entry key="test/games/gameOfFifteen/TestGameOfFifteenHelper.kt" value="package games.gameOfFifteen&#10;&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestGameOfFifteenHelper {&#10;    private fun testPermutation(permutation: List&lt;Int&gt;, expected: Boolean) {&#10;        Assert.assertEquals(&quot;The following permutation should be ${if (expected) &quot;even&quot; else &quot;odd&quot;}: $permutation&quot;, expected,&#10;            isEven(permutation))&#10;    }&#10;&#10;    private fun testPermutation(permutation: String, parity: Boolean) {&#10;        testPermutation(permutation.map { &quot;$it&quot;.toInt() }, parity)&#10;    }&#10;&#10;    private fun testEven(shortPermutation: String) = testPermutation(shortPermutation, true)&#10;    private fun testOdd(shortPermutation: String) = testPermutation(shortPermutation, false)&#10;&#10;    private fun testEven(shortPermutation: Int) = testEven(shortPermutation.toString())&#10;    private fun testOdd(shortPermutation: Int) = testOdd(shortPermutation.toString())&#10;&#10;    @Test&#10;    fun testEven0() = testEven(123)&#10;&#10;    @Test&#10;    fun testEven1() = testEven(1234)&#10;&#10;    @Test&#10;    fun testEven2() = testEven(3124)&#10;&#10;    @Test&#10;    fun testEven3() = testEven(2314)&#10;&#10;    @Test&#10;    fun testEven4() = testEven(2143)&#10;&#10;    @Test&#10;    fun testEven5() = testEven(1423)&#10;&#10;    @Test&#10;    fun testEven6() = testEven(4213)&#10;&#10;    @Test&#10;    fun testEven7() = testEven(1342)&#10;&#10;    @Test&#10;    fun testEven8() = testEven(4132)&#10;&#10;    @Test&#10;    fun testEven9() = testEven(3412)&#10;&#10;    @Test&#10;    fun testEven10() = testEven(3241)&#10;&#10;    @Test&#10;    fun testEven11() = testEven(2431)&#10;&#10;    @Test&#10;    fun testEven12() = testEven(4321)&#10;&#10;    @Test&#10;    fun testEven13() = testEven(&quot;0123456789&quot;)&#10;&#10;    @Test&#10;    fun testEven14() = testEven(&quot;4301865279&quot;)&#10;&#10;    @Test&#10;    fun testEven15() = testEven(&quot;9604572831&quot;)&#10;&#10;    @Test&#10;    fun testEven16() = testEven(&quot;1320485769&quot;)&#10;&#10;    @Test&#10;    fun testOdd0() = testOdd(132)&#10;&#10;    @Test&#10;    fun testOdd1() = testOdd(2134)&#10;&#10;    @Test&#10;    fun testOdd2() = testOdd(1324)&#10;&#10;    @Test&#10;    fun testOdd3() = testOdd(3214)&#10;&#10;    @Test&#10;    fun testOdd4() = testOdd(1243)&#10;&#10;    @Test&#10;    fun testOdd5() = testOdd(4123)&#10;&#10;    @Test&#10;    fun testOdd6() = testOdd(2413)&#10;&#10;    @Test&#10;    fun testOdd7() = testOdd(3142)&#10;&#10;    @Test&#10;    fun testOdd8() = testOdd(1432)&#10;&#10;    @Test&#10;    fun testOdd9() = testOdd(4312)&#10;&#10;    @Test&#10;    fun testOdd10() = testOdd(2341)&#10;&#10;    @Test&#10;    fun testOdd11() = testOdd(4231)&#10;&#10;    @Test&#10;    fun testOdd12() = testOdd(3421)&#10;&#10;    @Test&#10;    fun testOdd13() = testOdd(&quot;1234567890&quot;)&#10;&#10;    @Test&#10;    fun testOdd14() = testOdd(&quot;5782401963&quot;)&#10;&#10;    @Test&#10;    fun testOdd15() = testOdd(&quot;3592871064&quot;)&#10;&#10;    @Test&#10;    fun testOdd16() = testOdd(&quot;2045831967&quot;)&#10;&#10;    @Test&#10;    fun testStart() = testPermutation((1..15).toList(), true)&#10;}" />
+                          <entry key="test/games/gameOfFifteen/TestGameOfFifteenInitializer.kt" value="package games.gameOfFifteen&#10;&#10;import org.junit.Assert&#10;import org.junit.Test&#10;&#10;class TestGameOfFifteenInitializer {&#10;    @Test&#10;    fun testInitialPermutationIsNotTrivial() {&#10;        val initializer = RandomGameInitializer()&#10;        Assert.assertNotEquals(&quot;The initial permutation must not be trivial&quot;,&#10;            (1..15).toList(), initializer.initialPermutation)&#10;    }&#10;&#10;    @Test&#10;    fun testInitialPermutationIsEven() {&#10;        val initializer = RandomGameInitializer()&#10;        Assert.assertNotEquals(&quot;The initial permutation must be even&quot;,&#10;            isEven(initializer.initialPermutation))&#10;    }&#10;}" />
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                  </list>
+                </option>
+                <option name="unitId" value="0" />
+              </Lesson>
+            </list>
+          </option>
+        </Course>
+      </option>
+    </StudyTaskManager>
+  </component>
+</project>
